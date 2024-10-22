@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    text-align: center; /* Center all content on the page */
+    text-align: left;  
 }
 
 /* Gradient Box Styling - No Rounded Corners */
@@ -18,10 +18,10 @@ body {
     max-width: 100%; /* Full width with no rounding */
     margin: 0;
     border-radius: 0; /* No rounded corners */
-    text-align: center;
+    text-align: left;
 }
 
-/* Centering content */
+
 .container {
     max-width: 900px;  /* Set the maximum width for content */
     width: 100%;
