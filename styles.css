@@ -1,4 +1,4 @@
-/* Body styling with a professional font and clean background */
+/* Body styling */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -7,28 +7,56 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header styling with navy blue and clean layout */
+/* Header with gradient background */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #003366; /* Navy blue */
+    background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
     color: white;
 }
 
-/* Headings and text adjustments */
-h1, h2 {
-    margin-top: 0;
-    color: #003366; /* Navy color for headings */
+/* Navigation tabs */
+nav ul.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #003366;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
 }
 
-section {
+nav ul.tabs li {
+    margin: 0 10px;
+}
+
+nav ul.tabs li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #006699;
+    border-radius: 5px;
+}
+
+nav ul.tabs li a:hover {
+    background-color: #00cfff;
+}
+
+/* Section styling with background color */
+.info-box {
     padding: 20px;
-    background-color: white;
+    background-color: #e0f7ff; /* Sky blue box */
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Header and section text styling */
+h1, h2 {
+    margin-top: 0;
+    color: #003366;
+}
+
+/* List styles for skills and experience */
 ul {
     list-style-type: none;
     padding: 0;
@@ -38,43 +66,20 @@ ul li {
     padding: 10px 0;
 }
 
-/* Footer styling with consistent colors */
+/* Footer styling */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #003366; /* Navy blue */
+    background-color: #003366;
     color: white;
 }
 
-/* Links with hover effects */
+/* Link styles */
 a {
-    color: #003366; /* Navy blue for links */
+    color: white;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Image styling for profile images or project visuals */
-img {
-    border-radius: 50%;
-    border: 3px solid #003366; /* Navy blue border */
-}
-
-/* Optional table styling if needed */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table, th, td {
-    border: 1px solid #003366;
-    padding: 10px;
-}
-
-th {
-    background-color: #003366;
-    color: white;
 }
