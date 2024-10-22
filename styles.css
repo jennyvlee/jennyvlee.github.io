@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    text-align: left; /* Left align all body content */
+    text-align: center; /* Center all content on the page */
 }
 
 /* Gradient Box Styling - No Rounded Corners */
@@ -18,7 +18,7 @@ body {
     max-width: 100%; /* Full width with no rounding */
     margin: 0;
     border-radius: 0; /* No rounded corners */
-    text-align: center; /* Header remains centered */
+    text-align: center;
 }
 
 /* Centering content */
@@ -30,10 +30,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Navigation buttons */
+/* Navigation buttons centered */
 .project-buttons {
-    text-align: left;  /* Left align the buttons */
-    margin: 20px auto;
+    text-align: center;  /* Center the buttons */
+    margin: 20px auto;  /* Center with auto margins */
 }
 
 .project-buttons .btn {
@@ -81,13 +81,13 @@ ul li {
 
 /* Footer styling */
 footer {
-    text-align: center;  /* Only the footer text is centered */
-    padding: 20px;
-    background-color: #002244; /* Dark blue background */
-    color: white; /* White text */
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
     width: 100%;
     box-sizing: border-box;
-    max-width: 100%; /* Full width */
+    max-width: 900px; /* Limit max-width */
     margin: 0 auto;
 }
 
