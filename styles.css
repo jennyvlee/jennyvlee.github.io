@@ -52,6 +52,18 @@ body {
     background-color: #002244; /* Darker navy on hover */
 }
 
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #002244; /* Dark blue background */
+    color: white; /* White text */
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%; /* Full width */
+    margin: 0 auto;
+}
+
 /* Section styling with background color */
 .info-box {
     padding: 20px;
