@@ -9,20 +9,21 @@ body {
 
 /* Centering content */
 .container {
-    max-width: 900px;
+    width: 70%;  /* Original width restored */
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header with gradient background */
-header {
-    text-align: center;
-    padding: 20px;
+/* Gradient Box Styling */
+.gradient-box {
     background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
     color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Navigation buttons placed below header */
+/* Navigation buttons directly below gradient box */
 .project-buttons {
     text-align: center;
     margin: 20px 0;
@@ -32,14 +33,15 @@ header {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
-    background-color: #006699;
-    color: white;
-    border-radius: 5px;
+    background-color: #003366; /* Navy background */
+    color: white; /* White text */
+    border-radius: 10px; /* Rounded square */
     text-decoration: none;
+    font-weight: bold;
 }
 
 .project-buttons .btn:hover {
-    background-color: #00cfff;
+    background-color: #002244; /* Darker navy on hover */
 }
 
 /* Section styling with background color */
