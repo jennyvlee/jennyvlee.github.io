@@ -22,7 +22,7 @@ header {
     color: white;
 }
 
-/* Navigation buttons directly below header */
+/* Navigation buttons (Main Page, Project 1, etc.) directly below header */
 .project-buttons {
     text-align: center;
     margin: 20px 0;
@@ -31,12 +31,14 @@ header {
 .project-buttons .btn {
     display: inline-block;
     margin: 5px;
-    padding: 10px 20px;
+    padding: 10px 30px; /* Increased padding for better button size */
     background-color: #003366; /* Navy background */
     color: white; /* White text */
     border-radius: 10px; /* Rounded square */
     text-decoration: none;
     font-weight: bold; /* Bold text */
+    font-size: 16px; /* Larger font size for readability */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
 .project-buttons .btn:hover {
