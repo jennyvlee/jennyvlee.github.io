@@ -7,12 +7,13 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Main container with consistent width across the page */
+/* Centering content */
 .container {
-    max-width: 1000px; /* Consistent max-width for all boxes */
+    max-width: 900px;  /* Set the maximum width for all sections */
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
 }
 
 /* Gradient Box Styling */
@@ -22,19 +23,16 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    width: 100%; /* Full width to match the container */
+    width: 100%; /* Same width as footer */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
-/* Navigation buttons placed under the gradient box */
+/* Navigation buttons aligned to the left */
 .project-buttons {
-    text-align: center;
+    text-align: left;  /* Align buttons to the left */
     margin: 20px 0;
-    width: 100%; /* Full width matching the container */
-    padding: 15px;
+    width: 100%; /* Same width as footer */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
-    background-color: #f4f4f4; /* Lighter box for buttons */
-    border-radius: 10px;
 }
 
 .project-buttons .btn {
@@ -58,8 +56,8 @@ body {
     background-color: #e0f7ff; /* Sky blue box */
     margin: 20px 0;
     border-radius: 10px;
+    width: 100%; /* Same width as footer */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
-    width: 100%; /* Full width to match the container */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -85,7 +83,7 @@ footer {
     padding: 10px;
     background-color: #003366;
     color: white;
-    width: 100%; /* Full width to match other sections */
+    width: 100%; /* Footer width used as reference */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
