@@ -6,9 +6,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center; /* Center all content on the page */
-    height: 100vh; /* Make body fit the height of the viewport */
-    background-size: cover; /* Ensure the background covers the screen */
-    background-position: center; /* Center the background */
 }
 
 /* Gradient Box Styling - No Rounded Corners */
@@ -64,7 +61,6 @@ body {
     box-sizing: border-box;
     max-width: 900px; /* Limit max-width */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: calc(100vh - 200px); /* Ensure section content fits within screen height */
 }
 
 /* Header and section text styling */
