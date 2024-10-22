@@ -32,14 +32,15 @@ header {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
-    background-color: #00cfff; /* Light blue button background */
+    background-color: #003366; /* Navy background */
     color: white; /* White text */
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded square */
     text-decoration: none;
+    font-weight: bold; /* Bold text */
 }
 
 .project-buttons .btn:hover {
-    background-color: #006699; /* Darker blue on hover */
+    background-color: #002244; /* Darker navy on hover */
 }
 
 /* Section styling with background color */
