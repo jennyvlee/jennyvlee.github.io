@@ -18,7 +18,7 @@ body {
     max-width: 100%; /* Full width with no rounding */
     margin: 0;
     border-radius: 0; /* No rounded corners */
-    text-align: left; /* Header remains centered */
+    text-align: center; /* Header remains centered */
 }
 
 /* Centering content */
