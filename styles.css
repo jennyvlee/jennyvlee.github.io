@@ -9,23 +9,20 @@ body {
 
 /* Centering content */
 .container {
-    max-width: 900px;  /* Set the maximum width for content */
-    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Gradient Box Styling */
-.gradient-box {
-    background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
-    color: white;
+/* Header with gradient background */
+header {
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    width: 100%; /* Full width to match the container */
+    background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
+    color: white;
 }
 
-/* Navigation buttons directly below gradient box */
+/* Navigation buttons placed below header */
 .project-buttons {
     text-align: center;
     margin: 20px 0;
@@ -35,25 +32,22 @@ body {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
-    background-color: #003366; /* Navy background */
-    color: white; /* White text */
-    border-radius: 10px; /* Rounded square */
+    background-color: #006699;
+    color: white;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .project-buttons .btn:hover {
-    background-color: #002244; /* Darker navy on hover */
+    background-color: #00cfff;
 }
 
 /* Section styling with background color */
 .info-box {
     padding: 20px;
     background-color: #e0f7ff; /* Sky blue box */
-    margin: 20px 0;
+    margin: 20px;
     border-radius: 10px;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    width: 100%; /* Full width to match the container */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -79,8 +73,6 @@ footer {
     padding: 10px;
     background-color: #003366;
     color: white;
-    width: 100%; /* Full width to match other sections */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /* Link styles */
