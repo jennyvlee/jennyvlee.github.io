@@ -7,9 +7,10 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Centering content */
+/* Centering content and ensuring consistent width */
 .container {
-    width: 70%;  /* Original width restored */
+    max-width: 900px;  /* Set maximum width */
+    width: 100%; /* Full width to ensure alignment */
     margin: 0 auto;
     padding: 20px;
 }
@@ -21,12 +22,14 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    width: 100%; /* Full width for alignment with buttons */
 }
 
 /* Navigation buttons directly below gradient box */
 .project-buttons {
     text-align: center;
     margin: 20px 0;
+    width: 100%; /* Full width to align with gradient box */
 }
 
 .project-buttons .btn {
