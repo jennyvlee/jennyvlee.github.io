@@ -59,8 +59,9 @@ body {
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
-    max-width: 900px; /* Limit max-width */
+    max-width: 1000px; /* Limit max-width */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 /* Header and section text styling */
