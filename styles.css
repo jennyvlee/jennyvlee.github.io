@@ -1,56 +1,54 @@
-/* Body styling with playful colors and a new font */
+/* Body styling with a professional font and clean background */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fef9f9; /* soft pink background */
+    background-color: #f4f4f4;
 }
 
-/* Header styling with cute colors and padding */
+/* Header styling with navy blue and clean layout */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #ffcccb; /* light pink header */
-    color: #333;
-    border-bottom: 5px solid #ff6f61; /* stronger pink border */
+    background-color: #003366; /* Navy blue */
+    color: white;
 }
 
+/* Headings and text adjustments */
 h1, h2 {
     margin-top: 0;
-    color: #ff6f61; /* playful pink color for headings */
+    color: #003366; /* Navy color for headings */
 }
 
 section {
     padding: 20px;
     background-color: white;
     margin: 20px;
-    border-radius: 15px; /* rounder corners for a cute look */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow for depth */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-/* Styling lists with more space between items */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 ul li {
-    padding: 12px 0; /* more space between list items for better readability */
+    padding: 10px 0;
 }
 
-/* Footer styling with matching colors to the header */
+/* Footer styling with consistent colors */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #ffcccb; /* same light pink as the header */
-    color: #333;
-    border-top: 5px solid #ff6f61; /* stronger pink border */
+    padding: 10px;
+    background-color: #003366; /* Navy blue */
+    color: white;
 }
 
-/* Links with a cute pink hover effect */
+/* Links with hover effects */
 a {
-    color: #ff6f61; /* playful pink for links */
+    color: #003366; /* Navy blue for links */
     text-decoration: none;
 }
 
@@ -58,18 +56,13 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Adding borders and playful styling to images */
+/* Image styling for profile images or project visuals */
 img {
-    border-radius: 50%; /* round images for a cute touch */
-    border: 3px solid #ff6f61; /* matching pink border */
+    border-radius: 50%;
+    border: 3px solid #003366; /* Navy blue border */
 }
 
-/* Adding playful padding and spacing for lists */
-ul li i {
-    margin-right: 8px; /* small margin between icons and list text */
-}
-
-/* Table styling (if used) with rounded borders */
+/* Optional table styling if needed */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -77,11 +70,11 @@ table {
 }
 
 table, th, td {
-    border: 2px solid #ff6f61;
+    border: 1px solid #003366;
     padding: 10px;
-    text-align: left;
 }
 
 th {
-    background-color: #ffcccb;
+    background-color: #003366;
+    color: white;
 }
