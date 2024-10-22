@@ -1,41 +1,87 @@
+/* Body styling with playful colors and a new font */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fef9f9; /* soft pink background */
 }
 
+/* Header styling with cute colors and padding */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #ffcccb; /* light pink header */
+    color: #333;
+    border-bottom: 5px solid #ff6f61; /* stronger pink border */
 }
 
 h1, h2 {
     margin-top: 0;
+    color: #ff6f61; /* playful pink color for headings */
 }
 
 section {
     padding: 20px;
     background-color: white;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 15px; /* rounder corners for a cute look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow for depth */
 }
 
+/* Styling lists with more space between items */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 ul li {
-    padding: 10px 0; /* Added padding between list items */
+    padding: 12px 0; /* more space between list items for better readability */
 }
 
+/* Footer styling with matching colors to the header */
 footer {
     text-align: center;
+    padding: 15px;
+    background-color: #ffcccb; /* same light pink as the header */
+    color: #333;
+    border-top: 5px solid #ff6f61; /* stronger pink border */
+}
+
+/* Links with a cute pink hover effect */
+a {
+    color: #ff6f61; /* playful pink for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Adding borders and playful styling to images */
+img {
+    border-radius: 50%; /* round images for a cute touch */
+    border: 3px solid #ff6f61; /* matching pink border */
+}
+
+/* Adding playful padding and spacing for lists */
+ul li i {
+    margin-right: 8px; /* small margin between icons and list text */
+}
+
+/* Table styling (if used) with rounded borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 2px solid #ff6f61;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    text-align: left;
+}
+
+th {
+    background-color: #ffcccb;
 }
