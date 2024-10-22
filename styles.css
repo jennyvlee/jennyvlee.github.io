@@ -9,8 +9,8 @@ body {
 
 /* Centering content and ensuring consistent width */
 .container {
-    max-width: 900px;  /* Set maximum width */
-    width: 100%; /* Full width to ensure alignment */
+    max-width: 1000px; /* Adjusted for MacBook screen */
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -22,14 +22,19 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    width: 100%; /* Full width for alignment with buttons */
+    width: 100%;
 }
 
-/* Navigation buttons directly below gradient box */
+/* Navigation buttons placed under the gradient box */
 .project-buttons {
     text-align: center;
     margin: 20px 0;
-    width: 100%; /* Full width to align with gradient box */
+    max-width: 700px;  /* Smaller background box for buttons */
+    background-color: #f4f4f4; /* Lighter box for buttons */
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto; /* Center the buttons container */
 }
 
 .project-buttons .btn {
@@ -51,7 +56,7 @@ body {
 .info-box {
     padding: 20px;
     background-color: #e0f7ff; /* Sky blue box */
-    margin: 20px;
+    margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
