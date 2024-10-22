@@ -7,80 +7,59 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Centering content */
+/* Consistent container width */
 .container {
-    max-width: 900px;
+    max-width: 900px;  /* Set the maximum width */
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Header with gradient background */
-header {
-    text-align: center;
-    padding: 20px;
+/* Gradient Box Styling */
+.gradient-box {
     background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
     color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Full width to match the container */
+    box-sizing: border-box;
 }
 
-/* Navigation buttons placed below header */
+/* Navigation buttons aligned to the left but with full width */
 .project-buttons {
-    text-align: center;
+    text-align: left;  /* Align buttons to the left */
     margin: 20px 0;
+    width: 100%; /* Full width */
+    box-sizing: border-box;
 }
 
 .project-buttons .btn {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
-    background-color: #006699;
-    color: white;
-    border-radius: 5px;
+    background-color: #003366; /* Navy background */
+    color: white; /* White text */
+    border-radius: 10px; /* Rounded square */
     text-decoration: none;
+    font-weight: bold;
 }
 
 .project-buttons .btn:hover {
-    background-color: #00cfff;
+    background-color: #002244; /* Darker navy on hover */
 }
 
 /* Section styling with background color */
 .info-box {
     padding: 20px;
     background-color: #e0f7ff; /* Sky blue box */
-    margin: 20px;
+    margin: 20px 0;
     border-radius: 10px;
+    width: 100%; /* Full width to match the container */
+    box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Header and section text styling */
-h1, h2 {
-    margin-top: 0;
-    color: #003366;
-}
-
-/* List styles for skills and experience */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 10px 0;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #003366;
-    color: white;
-}
-
-/* Link styles */
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+h1,
