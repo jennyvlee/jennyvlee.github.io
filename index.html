@@ -1,77 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenny (Jinhee) Lee - Resume</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>John Appleseed - Profile</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+    <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+    <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+    <!-- Custom CSS for playful design -->
     <link rel="stylesheet" href="styles.css">
+
+    <style type="text/css">
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
+            background-color: #f4f9f9;
+        }
+
+        h1 {
+            font-size: 34px;
+            color: #ff6f61;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #ff6f61;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #ff6f61;
+        }
+
+        p,
+        ul {
+            font-size: 16px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcccb;
+        }
+
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcccb;
+            border-top: 3px solid #ff6f61;
+        }
+
+        .navbar-default {
+            background-color: #ffcccb;
+            border-color: #ff6f61;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #ff6f61;
+        }
+
+        /* Adjusting tables and tab styling */
+        .tabbed-pane {
+            padding-top: 12px;
+        }
+
+        .html-widget {
+            margin-bottom: 20px;
+        }
+
+        ul.task-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* Additional playful styling for icons */
+        i {
+            margin-right: 8px;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 3px solid #ff6f61;
+        }
+
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
 </head>
+
 <body>
     <header>
-        <h1>Jenny (Jinhee) Lee</h1>
-        <p>Seattle, WA | jennyevelee@gmail.com | (954) 278-1368</p>
+        <h1>John Appleseed <i class="fas fa-smile-beam"></i></h1>
+        <p><i class="fas fa-map-marker-alt"></i> New York City, NY | <i class="fas fa-envelope"></i> john.appleseed@gmail.com | <i
+                class="fas fa-phone"></i> (123) 456-7890</p>
         <p>
-            <a href="https://linkedin.com/in/jennyevelee" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/jennyvlee" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </p>
     </header>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>University of Washington</strong>, Bachelor of Arts in Communication (Minor: Data Science and Informatics)</p>
-        <p>Graduation Date: May 2024</p>
-        <p>Relevant Coursework: Calculus I & II, Linear Algebra, Intro to Statistics, Python, Java, R, SQL</p>
-    </section>
+    <div class="container">
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <p><strong>ABC University</strong>, Master of Science in Data Science (May 2022)</p>
+            <p><i class="fas fa-calendar-alt"></i> Graduation Date: May 2022</p>
+        </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> R, Python, Java</li>
-            <li><strong>Database Management:</strong> SQL, MySQL, Microsoft Access</li>
-            <li><strong>Version Control:</strong> Git, GitHub</li>
-            <li><strong>UI/UX Design:</strong> Figma, Canva, Miro</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> Programming: Python, R</li>
+                <li><i class="fas fa-chart-line"></i> Data Visualization: Tableau, Power BI</li>
+                <li><i class="fas fa-database"></i> Databases: SQL, PostgreSQL</li>
+                <li><i class="fas fa-cloud"></i> Cloud: AWS, GCP, Azure</li>
+            </ul>
+        </section>
 
-    <section id="work-experience">
-        <h2>Work Experience</h2>
+        <section id="experience">
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
 
-        <h3>Resilience Inc. (Google Ads Associate)</h3>
-        <p><strong>Sep. 2023 – Present</strong></p>
-        <p>Analyzed and optimized Google Ads campaigns, improving click-through rates and conversions by 20%.</p>
+            <h3><i class="fas fa-bullhorn"></i> Google Ads Associate - Resilience Inc.</h3>
+            <p><i class="fas fa-calendar-alt"></i> Sep. 2023 – Present</p>
+            <p>Managed and optimized Google Ads campaigns, improving conversion rates by 20%.</p>
 
-        <h3>University of Washington – Information Technology (Student Information System Specialist)</h3>
-        <p><strong>May 2023 – Present</strong></p>
-        <p>Resolved system errors, optimized performance tracking, and managed student academic planning system.</p>
+            <h3><i class="fas fa-server"></i> Student Information Specialist - ABC University</h3>
+            <p><i class="fas fa-calendar-alt"></i> May 2023 – Present</p>
+            <p>Resolved system errors and optimized performance tracking for academic planning.</p>
+        </section>
 
-        <h3>University of Washington Libraries (Student Administration Assistant)</h3>
-        <p><strong>Aug. 2023 – Present</strong></p>
-        <p>Analyzed service usage trends, optimized scheduling, and developed targeted resources to improve client satisfaction.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Project Experience</h2>
-
-        <h3>Designing an HRIS Platform to Address Pay Disparities at GRU</h3>
-        <p><strong>Sep. 2023 – Dec. 2023</strong></p>
-        <p>Developed an HRIS platform that addressed pay disparities and received stakeholder approval for implementation.</p>
-
-        <h3>Developing a SQL-Based Music Database and ETL Pipeline</h3>
-        <p><strong>Jan. 2023 – Mar. 2023</strong></p>
-        <p>Created a SQL-based music database to analyze Hip-Hop streaming trends from platforms like Spotify and YouTube Music.</p>
-
-        <h3>Analyzing and Predicting Book Checkout Trends at Seattle Public Library</h3>
-        <p><strong>Jan. 2023 – Mar. 2023</strong></p>
-        <p>Performed statistical analysis of book checkout trends using R, informing inventory optimization strategies.</p>
-
-        <h3>Developing an Interactive Web on AI-Driven Misinformation</h3>
-        <p><strong>Jan. 2023 – Mar. 2023</strong></p>
-        <p>Built a responsive website educating users on AI-driven misinformation, featuring quizzes and case studies.</p>
-    </section>
+        <section id="projects">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <h3><i class="fas fa-database"></i> SQL-Based Music Database</h3>
+            <p><i class="fas fa-calendar-alt"></i> Jan. 2023 – Mar. 2023</p>
+            <p>Developed a SQL-based database for analyzing music streaming trends.</p>
+        </section>
+    </div>
 
     <footer>
-        <p>Contact me at: jennyevelee@gmail.com</p>
-        <p>Copyright © 2024 Jenny Lee</p>
+        <p><i class="fas fa-envelope"></i> Contact: john.appleseed@gmail.com</p>
+        <p>Copyright © 2022 John Appleseed</p>
     </footer>
 </body>
+
 </html>
