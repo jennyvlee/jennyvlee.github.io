@@ -1,78 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jenny (Jinhee) Lee - Resume</title>
+/* Centering content */
+.container {
+    max-width: 900px;  /* Set the maximum width for content */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-    <!-- Link to external CSS file for styling -->
-    <link rel="stylesheet" href="styles.css">
+/* Gradient Box Styling */
+.gradient-box {
+    background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Full width to match the container */
+}
 
-    <!-- Optional: Google Font for a more professional look -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-</head>
+/* Navigation buttons aligned to the left */
+.project-buttons {
+    text-align: left;  /* Align buttons to the left */
+    margin: 20px 0;
+}
 
-<body>
-    <!-- Main Page Content -->
-    <section id="main-info" class="container info-box">
-        <header>
-            <h1>Jenny (Jinhee) Lee</h1>
-            <p>Seattle, WA | jennyevelee@gmail.com | (954) 278-1368</p>
-            <p>
-                <a href="https://linkedin.com/in/jennyevelee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-                <a href="https://github.com/jennyvlee" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </p>
-        </header>
+.project-buttons .btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #003366; /* Navy background */
+    color: white; /* White text */
+    border-radius: 10px; /* Rounded square */
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        <!-- Navigation buttons placed under the heading section -->
-        <div class="project-buttons">
-            <a href="index.html" class="btn">Main Page</a>
-            <a href="project1.html" class="btn">Project 1: HRIS Platform</a>
-            <a href="project2.html" class="btn">Project 2: SQL Music Database</a>
-            <a href="project3.html" class="btn">Project 3: Book Checkout Trends</a>
-            <a href="project4.html" class="btn">Project 4: AI-Driven Misinformation</a>
-        </div>
+.project-buttons .btn:hover {
+    background-color: #002244; /* Darker navy on hover */
+}
 
-        <section id="education">
-            <h2>Education</h2>
-            <p><strong>University of Washington</strong>, Bachelor of Arts in Communication (Minor: Data Science and Informatics)</p>
-            <p><strong>Graduation Date:</strong> May 2024</p>
-            <p><strong>Relevant Coursework:</strong> Calculus I & II, Linear Algebra, Intro to Statistics, Python, Java, R, SQL</p>
-        </section>
+/* Section styling with background color */
+.info-box {
+    padding: 20px;
+    background-color: #e0f7ff; /* Sky blue box */
+    margin: 20px 0;
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    width: 100%; /* Full width to match the container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> R, Python, Java</li>
-                <li><strong>Database Management:</strong> SQL, MySQL, Microsoft Access</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-                <li><strong>UI/UX Design:</strong> Figma, Canva, Miro</li>
-            </ul>
-        </section>
+/* Header and section text styling */
+h1, h2 {
+    margin-top: 0;
+    color: #003366;
+}
 
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            <h3>Resilience Inc. (Google Ads Associate)</h3>
-            <p><strong>Sep. 2023 – Present</strong></p>
-            <p>Analyzed and optimized Google Ads campaigns, improving click-through rates and conversions by 20%.</p>
+/* List styles for skills and experience */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-            <h3>University of Washington – Information Technology (Student Information System Specialist)</h3>
-            <p><strong>May 2023 – Present</strong></p>
-            <p>Resolved system errors, optimized performance tracking, and managed student academic planning system.</p>
+ul li {
+    padding: 10px 0;
+}
 
-            <h3>University of Washington Libraries (Student Administration Assistant)</h3>
-            <p><strong>Aug. 2023 – Present</strong></p>
-            <p>Analyzed service usage trends, optimized scheduling, and developed targeted resources to improve client satisfaction.</p>
-        </section>
-    </section>
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    width: 100%; /* Full width to match other sections */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
 
-    <footer>
-        <p>Contact me at: jennyevelee@gmail.com</p>
-    </footer>
-</body>
+/* Link styles */
+a {
+    color: white;
+    text-decoration: none;
+}
 
-</html>
+a:hover {
+    text-decoration: underline;
+}
