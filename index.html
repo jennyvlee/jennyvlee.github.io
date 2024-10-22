@@ -17,19 +17,9 @@
 </head>
 
 <body>
-    <!-- Navigation buttons -->
-    <nav>
-        <ul class="tabs">
-            <li><a href="index.html">Main Page</a></li>
-            <li><a href="project1.html">Project 1: HRIS Platform</a></li>
-            <li><a href="project2.html">Project 2: SQL Music Database</a></li>
-            <li><a href="project3.html">Project 3: Book Checkout Trends</a></li>
-            <li><a href="project4.html">Project 4: AI-Driven Misinformation</a></li>
-        </ul>
-    </nav>
 
-    <!-- Main Page Content -->
-    <section id="main-info" class="container info-box">
+    <!-- Gradient Box at the top -->
+    <section id="main-info" class="container gradient-box">
         <header>
             <h1>Jenny (Jinhee) Lee</h1>
             <p>Seattle, WA | jennyevelee@gmail.com | (954) 278-1368</p>
@@ -38,7 +28,19 @@
                 <a href="https://github.com/jennyvlee" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </p>
         </header>
+    </section>
 
+    <!-- Navigation buttons placed under the gradient box -->
+    <div class="project-buttons container">
+        <a href="index.html" class="btn">Main Page</a>
+        <a href="project1.html" class="btn">Project 1: HRIS Platform</a>
+        <a href="project2.html" class="btn">Project 2: SQL Music Database</a>
+        <a href="project3.html" class="btn">Project 3: Book Checkout Trends</a>
+        <a href="project4.html" class="btn">Project 4: AI-Driven Misinformation</a>
+    </div>
+
+    <!-- Content Section Separate from Gradient Box and Buttons -->
+    <section class="container info-box">
         <section id="education">
             <h2>Education</h2>
             <p><strong>University of Washington</strong>, Bachelor of Arts in Communication (Minor: Data Science and Informatics)</p>
@@ -72,9 +74,10 @@
         </section>
     </section>
 
-    <footer>
+    <footer class="container">
         <p>Contact me at: jennyevelee@gmail.com</p>
     </footer>
+
 </body>
 
 </html>
