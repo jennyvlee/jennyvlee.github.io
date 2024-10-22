@@ -1,4 +1,4 @@
-/* Body styling */
+    /* Body styling */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -59,7 +59,7 @@ body {
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
-    max-width: 1000px; /* Limit max-width */
+    max-width: 100%; /* Limit max-width */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
@@ -88,7 +88,7 @@ footer {
     color: white;
     width: 100%;
     box-sizing: border-box;
-    max-width: 900px; /* Limit max-width */
+    max-width: 100%; /* Limit max-width */
     margin: 0 auto;
 }
 
