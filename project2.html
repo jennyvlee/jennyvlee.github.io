@@ -52,7 +52,7 @@
         <!-- SQL Queries Section -->
         <h3>Complex Queries</h3>
         <pre>
-Delaney:
+            
 1. How many songs are there for the Genre CPop? 
 CREATE VIEW numberOfSongsPerGenre AS (
     SELECT COUNT(S.SongID) AS numSongs, S.SongName, A.ArtistFirstName, A.ArtistLastName
@@ -60,4 +60,84 @@ CREATE VIEW numberOfSongsPerGenre AS (
     JOIN Genre G ON S.GenreID = G.GenreID
     JOIN Artist_Song ArtS ON ArtS.SongID = S.SongID
     JOIN Artist A ON A.ArtistID = ArtS.ArtistID
-   
+    WHERE G.GenreName = 'CPop'
+    GROUP BY S.SongName, A.ArtistFirstName, A.ArtistLastName
+)
+
+2. What/Who are the top 5 most popular songs/artists?
+CREATE VIEW top5SongsAndArtists AS (
+    SELECT DISTINCT TOP 5 S.SongName, A.ArtistFirstName, A.ArtistLastName, S.Streams
+    FROM Song S
+    JOIN Artist_Song ArtS ON S.SongID = ArtS.SongID
+    JOIN Artist A ON ArtS.ArtistID = A.ArtistID
+    ORDER BY S.Streams DESC
+)
+
+1. Which Artist has the most streamed song?
+CREATE VIEW MostStreamedSongArtist AS (
+   SELECT TOP 1 Max(S.Streams) AS Streams, S.SongName, A.ArtistFirstName, 
+   A.ArtistLastName
+   FROM Song S
+   JOIN Artist_Song ArtSong ON ArtSong.SongID = S.SongID
+   JOIN Artist A ON A.ArtistID = ArtSong.ArtistID
+   GROUP BY S.SongName, A.ArtistFirstName, A.ArtistLastName
+)
+
+2. Which artist is most popular in the United States?
+CREATE VIEW MostPopArtistInUS AS (
+   SELECT TOP 1 S.Streams, S.SongName, A.ArtistFirstName, A.ArtistLastName, A.Country
+   FROM Song S
+   JOIN Artist_Song ArtSong ON ArtSong.SongID = S.SongID
+   JOIN Artist A ON A.ArtistID = ArtSong.ArtistID
+   WHERE A.Country = 'U.S.'
+   GROUP BY S.Streams, S.SongName, A.ArtistFirstName, A.ArtistLastName, A.Country
+   ORDER BY S.Streams DESC
+)
+
+1. Which artists have released more than two songs?
+CREATE VIEW ArtistsWith2OrMoreSongs AS (
+    SELECT A.ArtistFirstName, A.ArtistLastName
+    FROM Song S
+    JOIN Artist_Song ASong ON S.SongID = ASong.SongID
+    JOIN Artist A ON A.ArtistID = ASong.ArtistID
+    GROUP BY A.ArtistFirstName, A.ArtistLastName
+    HAVING COUNT(S.SongID) >= 2
+)
+
+2. Return playlists with most variety of songs (has most different genres)
+CREATE VIEW MostVarietyPlaylists AS (
+    SELECT TOP 1 P.PlaylistName, COUNT(S.SongID) AS Songs, COUNT(DISTINCT G.GenreID) AS DiffGenres
+    FROM Song_Playlist SP
+    JOIN Playlist P ON SP.PlaylistID = P.PlaylistID
+    JOIN Song S ON SP.SongID = S.SongID
+    JOIN Genre G ON G.GenreID = S.GenreID
+    GROUP BY P.PlaylistName
+    ORDER BY COUNT(DISTINCT G.GenreID) DESC
+)
+
+1. Average Streams per Genre
+CREATE VIEW View_AverageStreamsPerGenre AS (
+    SELECT g.GenreName, AVG(s.Streams) AS AverageStreams
+    FROM Genre g
+    INNER JOIN Song s ON g.GenreID = s.GenreID
+    GROUP BY g.GenreName
+)
+
+2. Song Count for Genre "HipHop"
+CREATE VIEW View_SongCountHipHop AS (
+    SELECT g.GenreName, COUNT(s.SongName) AS SongCount
+    FROM Genre g
+    INNER JOIN Song s ON g.GenreID = s.GenreID
+    WHERE g.GenreName = 'HipHop'
+    GROUP BY g.GenreName
+)
+        </pre>
+    </section>
+
+    <footer>
+        <p>Contact me at: jennyevelee@gmail.com</p>
+    </footer>
+
+</body>
+
+</html>
