@@ -50,19 +50,98 @@
             <li>Identified the top 10 Hip-Hop songs and artists, which informed a 10% increase in targeted marketing efforts.</li>
         </ul>
 
-        <!-- Google Drive File Link -->
+        <!-- SQL Queries Section -->
+        <h3>Complex Queries</h3>
+        <pre>
+Delaney:
+1. How many songs are there for the Genre CPop? 
+CREATE VIEW numberOfSongsPerGenre AS (
+    SELECT COUNT(S.SongID) AS numSongs, S.SongName, A.ArtistFirstName, A.ArtistLastName
+    FROM Song S
+    JOIN Genre G ON S.GenreID = G.GenreID
+    JOIN Artist_Song ArtS ON ArtS.SongID = S.SongID
+    JOIN Artist A ON A.ArtistID = ArtS.ArtistID
+    WHERE G.GenreName = 'CPop'
+    GROUP BY S.SongName, A.ArtistFirstName, A.ArtistLastName
+)
+
+2. Who are the top 5 most popular songs/artists? 
+CREATE VIEW top5SongsAndArtists AS (
+    SELECT DISTINCT TOP 5 S.SongName, A.ArtistFirstName, A.ArtistLastName, S.Streams
+    FROM Song S
+    JOIN Artist_Song ArtS ON S.SongID = ArtS.SongID
+    JOIN Artist A ON ArtS.ArtistID = A.ArtistID
+    ORDER BY S.Streams DESC
+)
+
+Erica:
+1. Which Artist has the most streamed song?
+CREATE VIEW MostStreamedSongArtist AS (
+   SELECT TOP 1 Max(S.Streams) AS Streams, S.SongName, A.ArtistFirstName, 
+   A.ArtistLastName
+   FROM Song S
+   JOIN Artist_Song ArtSong ON ArtSong.SongID = S.SongID
+   JOIN Artist A ON A.ArtistID = ArtSong.ArtistID
+   GROUP BY S.SongName, A.ArtistFirstName, A.ArtistLastName
+)
+
+2. Which artist is most popular in the United States?
+CREATE VIEW MostPopArtistInUS AS (
+   SELECT TOP 1 S.Streams, S.SongName, A.ArtistFirstName, A.ArtistLastName, A.Country
+   FROM Song S
+   JOIN Artist_Song ArtSong ON ArtSong.SongID = S.SongID
+   JOIN Artist A ON A.ArtistID = ArtSong.ArtistID
+   WHERE A.Country = 'U.S.'
+   GROUP BY S.Streams, S.SongName, A.ArtistFirstName, A.ArtistLastName, A.Country
+   ORDER BY S.Streams DESC
+)
+
+Medha:
+1. Which artists have released more than two songs?
+CREATE VIEW ArtistsWith2OrMoreSongs AS (
+    SELECT A.ArtistFirstName, A.ArtistLastName
+    FROM Song S
+    JOIN Artist_Song ASong ON S.SongID = ASong.SongID
+    JOIN Artist A ON A.ArtistID = ASong.ArtistID
+    GROUP BY A.ArtistFirstName, A.ArtistLastName
+    HAVING COUNT(S.SongID) >= 2
+)
+
+2. Return playlists with most variety of songs (different genres)
+CREATE VIEW MostVarietyPlaylists AS (
+    SELECT TOP 1 P.PlaylistName, COUNT(S.SongID) AS Songs, COUNT(DISTINCT G.GenreID) AS DiffGenres
+    FROM Song_Playlist SP
+    JOIN Playlist P ON SP.PlaylistID = P.PlaylistID
+    JOIN Song S ON SP.SongID = S.SongID
+    JOIN Genre G ON G.GenreID = S.GenreID
+    GROUP BY P.PlaylistName
+    ORDER BY COUNT(DISTINCT G.GenreID) DESC
+)
+
+Jenny:
+1. Average Streams per Genre
+CREATE VIEW View_AverageStreamsPerGenre AS (
+    SELECT g.GenreName, AVG(s.Streams) AS AverageStreams
+    FROM Genre g
+    INNER JOIN Song s ON g.GenreID = s.GenreID
+    GROUP BY g.GenreName
+)
+
+2. Song Count for Genre "HipHop"
+CREATE VIEW View_SongCountHipHop AS (
+    SELECT g.GenreName, COUNT(s.SongName) AS SongCount
+    FROM Genre g
+    INNER JOIN Song s ON g.GenreID = s.GenreID
+    WHERE g.GenreName = 'HipHop'
+    GROUP BY g.GenreName
+)
+        </pre>
+
+        <!-- Google Drive File Button -->
         <h3>Download SQL Database Project</h3>
         <p>
-            <a href="https://drive.google.com/file/d/1ZfmTJ9Zi8QbONo_BW3lyo_JHvNsNmbo-/view?usp=sharing" target="_blank">
-                <i class="fas fa-download"></i> Download SQL Database Project (Google Drive)
-            </a>
-        </p>
-
-        <!-- Google Docs Document Link -->
-        <h3>Project Documentation</h3>
-        <p>
-            <a href="https://docs.google.com/document/d/1ZnzmYESf7wa7FXQLFwQwMJB_ugQ_UCs420Jtxo2tcDU/edit?usp=sharing" target="_blank">
-                <i class="fas fa-file-alt"></i> View Project Documentation (Google Docs)
+            <a href="https://drive.google.com/file/d/1ZfmTJ9Zi8QbONo_BW3lyo_JHvNsNmbo-/view?usp=sharing" class="btn" style="background-color: #003366; color: white; text-align: center; padding: 10px 20px; display: inline-block; border-radius: 10px; font-weight: bold;" target="_blank">
+                <i class="fas fa-download"></i> Download SQL Database Project
             </a>
         </p>
     </section>
