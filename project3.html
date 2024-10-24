@@ -7,9 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Project 3: Book Checkout Trends</title>
 
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Optional: Google Font for a more professional look -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
 
 <body>
@@ -25,13 +29,23 @@
             </p>
         </header>
 
-        <!-- Navigation buttons placed under the gradient box -->
+        <!-- Navigation buttons with Home icon -->
         <div class="project-buttons">
-            <a href="index.html" class="btn">Main Page</a>
-            <a href="project1.html" class="btn">Project 1: HRIS Platform</a>
-            <a href="project2.html" class="btn">Project 2: SQL Music Database</a>
-            <a href="project3.html" class="btn">Project 3: Book Checkout Trends</a>
-            <a href="project4.html" class="btn">Project 4: AI-Driven Misinformation</a>
+            <a href="index.html" class="btn">
+                <i class="fas fa-home"></i> <!-- Home icon -->
+            </a>
+            <a href="project1.html" class="btn">
+                <i class="fas fa-file-alt"></i> Project 1: HRIS Platform
+            </a>
+            <a href="project2.html" class="btn">
+                <i class="fas fa-database"></i> Project 2: SQL Music Database
+            </a>
+            <a href="project3.html" class="btn">
+                <i class="fas fa-book"></i> Project 3: Book Checkout Trends
+            </a>
+            <a href="project4.html" class="btn">
+                <i class="fas fa-brain"></i> Project 4: AI-Driven Misinformation
+            </a>
         </div>
     </section>
 
@@ -39,49 +53,26 @@
     <section class="container info-box">
         <h2>Project Overview</h2>
         <p><strong>Project Duration:</strong> Jan. 2023 – Mar. 2023</p>
-        <p><strong>Tools Used:</strong> R, ggplot2, Shiny</p>
+        <p><strong>Tools Used:</strong> R, ggplot2</p>
 
-        <h3>Key Achievements</h3>
-        <ul>
-            <li>Analyzed Seattle Public Library book checkout trends using R and ggplot2.</li>
-            <li>Performed statistical analysis to identify the most and least popular media types over time.</li>
-            <li>Developed predictive models to forecast monthly checkout trends with 85% accuracy.</li>
-            <li>Optimized inventory management, reducing unnecessary stock by 15%.</li>
-        </ul>
-
-        <!-- GitHub Repository Button -->
-        <h3>GitHub Repository</h3>
+        <!-- Updated text without numbers -->
+        <h3>Project Details</h3>
         <p>
-            <a href="https://github.com/AdamSkog/Seattle-public-library-checkouts.git" class="btn" style="background-color: #003366; color: white; text-align: center; padding: 10px 20px; display: inline-block; border-radius: 10px; font-weight: bold;" target="_blank">
-                <i class="fas fa-code-branch"></i> View GitHub Repository
-            </a>
-        </p>
-    </section>
-
-    <!-- Sky Blue Box for Group Project Details -->
-    <section class="container info-box">
-        <h3>Info201b Final Project</h3>
-        <p>
-            Repository for the final assignment by group BD5: Adam Skoglund, Jenny Lee, Ricardo Torres Arevalo, Rohan Narasayya, Tianze Xu.
-        </p>
-        <p>The major questions we are exploring in this project are:</p>
-        <ul>
-            <li>What are the most popular types of media being checked out?</li>
-            <li>How have the total checkouts of these media types changed over time?</li>
-            <li>How have the total checkouts of the two usage classes changed over time?</li>
-            <li>Which months have the most and fewest checkouts?</li>
-        </ul>
-        <p>
-            This dataset includes a monthly count of Seattle Public Library checkouts by title for physical and electronic items. The dataset begins with checkouts that occurred in April 2005.
+            Analyzed Seattle Public Library book checkout trends using R and ggplot2.
+            Performed statistical analysis to identify the most and least popular media types over time.
+            Developed predictive models to forecast monthly checkout trends.
+            Optimized inventory management, reducing unnecessary stock.
         </p>
 
-        <!-- Shiny App Button -->
-        <h3>Shiny App</h3>
-        <p>
-            <a href="https://rohan1.shinyapps.io/info201b-2023wi-Final-Project-BD5/" class="btn" style="background-color: #003366; color: white; text-align: center; padding: 10px 20px; display: inline-block; border-radius: 10px; font-weight: bold;" target="_blank">
-                <i class="fas fa-chart-line"></i> View Shiny App
-            </a>
-        </p>
+        <!-- Embed Shiny App in iframe -->
+        <h3>Shiny App Preview</h3>
+        <iframe width="768" height="432" src="https://rohan1.shinyapps.io/info201b-2023wi-Final-Project-BD5/" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+        <!-- Second part in sky blue box -->
+        <section class="info-box" style="background-color: #e0f7ff;">
+            <h3>Project Summary</h3>
+            <p>This dataset includes a monthly count of Seattle Public Library checkouts by title for physical and electronic items. The dataset begins with checkouts that occurred in April 2005.</p>
+        </section>
     </section>
 
     <footer>
