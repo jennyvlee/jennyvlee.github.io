@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Updated Page</title>
-    <!-- Include the Bootstrap Darkly CSS -->
-    <link rel="stylesheet" href="path/to/bootstrap.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jenny (Jinhee) Lee - Portfolio </title>
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Optional: Google Font for a more professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">BrandName</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Gradient Header Box with buttons aligned -->
+    <section id="main-info" class="gradient-box">
+        <header>
+            <h1>Jenny (Jinhee) Lee</h1>
+            <p>Seattle, WA | jennyevelee@gmail.com | (954) 278-1368</p>
+            <p>
+                <a href="https://linkedin.com/in/jennyevelee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <a href="https://github.com/jennyvlee" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </p>
+        </header>
+    </section>
 
-    <!-- Main Content -->
-    <div class="container mt-5">
-        <div class="row">
-            <!-- First Column -->
-            <div class="col-md-6">
-                <h2 class="text-white">Welcome to Your Updated Page</h2>
-                <p class="text-secondary">This is a sample description using the darkly theme from Bootstrap.</p>
-                <button class="btn btn-success">Click Me</button>
-            </div>
-
-            <!-- Second Column -->
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
+    <!-- Navigation buttons placed under the gradient box -->
+    <div class="project-buttons">
+        <a href="index.html" class="btn">Main Page</a>
+        <a href="project1.html" class="btn">Project 1: HRIS Platform</a>
+        <a href="project2.html" class="btn">Project 2: SQL Music Database</a>
+        <a href="project3.html" class="btn">Project 3: Book Checkout Trends</a>
+        <a href="project4.html" class="btn">Project 4: AI-Driven Misinformation</a>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white mt-5 p-4 text-center">
-        &copy; 2024 Your Company. All Rights Reserved.
-    </footer>
+    <!-- Content Section Separate from Gradient Box and Buttons -->
+    <section class="info-box">
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>University of Washington</strong>, Bachelor of Arts in Communication (Minor: Data Science and Informatics)</p>
+            <p><strong>Graduation Date:</strong> May 2024</p>
+            <p><strong>Relevant Coursework:</strong> Calculus I & II, Linear Algebra, Intro to Statistics, Python, Java, R, SQL</p>
+        </section>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> R, Python, Java</li>
+                <li><strong>Database Management:</strong> SQL, MySQL, Microsoft Access</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+                <li><strong>UI/UX Design:</strong> Figma, Canva, Miro</li>
+            </ul>
+        </section>
+
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <h3>Resilience Inc. (Google Ads Associate)</h3>
+            <p><strong>Sep. 2023 – Present</strong></p>
+            <p>Analyzed and optimized Google Ads campaigns, improving click-through rates and conversions by 20%.</p>
+
+            <h3>University of Washington – Information Technology (Student Information System Specialist)</h3>
+            <p><strong>May 2023 – Present</strong></p>
+            <p>Resolved system errors, optimized performance tracking, and managed student academic planning system.</p>
+
+            <h3>University of Washington Libraries (Student Administration Assistant)</h3>
+            <p><strong>Aug. 2023 – Present</strong></p>
+            <p>Analyzed service usage trends, optimized scheduling, and developed targeted resources to improve client satisfaction.</p>
+        </section>
+    </section>
+
+    <footer>
+        <p>Contact me at: jennyevelee@gmail.com</p>
+    </footer>
 </body>
+
 </html>
