@@ -1,40 +1,59 @@
-/* Custom styles */
+/* Custom styles with Bootstrap integration */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Lato', sans-serif; /* Matches Bootstrap's default font */
+    line-height: 1.5;
 }
 
+/* Header styles */
 header {
     padding: 20px;
     text-align: center;
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-body-color);
 }
 
+/* Footer styles */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #003366;
-    color: white;
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
+/* Button styles */
 .btn {
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: var(--bs-border-radius-lg);
 }
 
+/* Information box styling */
 .info-box {
-    background-color: #e0f7ff;
+    background-color: var(--bs-info-bg-subtle);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: var(--bs-border-radius-lg);
     margin-bottom: 20px;
 }
 
+/* Container width for large screens */
 .container {
     max-width: 1140px;
     margin: auto;
 }
 
+/* Gradient box styling */
 .gradient-box {
-    background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4);
-    color: white;
+    background: linear-gradient(90deg, var(--bs-primary), var(--bs-info), var(--bs-light));
+    color: var(--bs-body-color);
     padding: 20px;
+    border-radius: var(--bs-border-radius-xl);
 }
+
+/* Additional adjustments */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--bs-heading-color);
+}
+
+p {
+    color: var(--bs-body-color);
+}
+
