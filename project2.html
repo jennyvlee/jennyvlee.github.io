@@ -5,140 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project 2: SQL Music Database</title>
+    <title>Jenny (Jinhee) Lee - Project 2</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
 
 <body>
+    <header class="text-center py-4 bg-primary text-white">
+        <h1>Project 2</h1>
+        <p>Data Analysis on Employee Diversity</p>
+    </header>
 
-    <!-- Gradient Header Box with Navigation Buttons -->
-    <section id="main-info" class="gradient-box">
-        <header>
-            <h1>Jenny (Jinhee) Lee</h1>
-            <p>Seattle, WA | jennyevelee@gmail.com | (954) 278-1368</p>
-            <p>
-                <a href="https://linkedin.com/in/jennyevelee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-                <a href="https://github.com/jennyvlee" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </p>
-        </header>
+    <!-- Content Section -->
+    <section class="container my-5">
+        <h2>Overview</h2>
+        <p>This project focused on analyzing workforce demographics and diversity trends within the company.</p>
 
-        <!-- Navigation buttons placed under the gradient box -->
-        <div class="project-buttons">
-            <a href="index.html" class="btn">Main Page</a>
-            <a href="project1.html" class="btn">Project 1: HRIS Platform</a>
-            <a href="project2.html" class="btn">Project 2: SQL Music Database</a>
-            <a href="project3.html" class="btn">Project 3: Book Checkout Trends</a>
-            <a href="project4.html" class="btn">Project 4: AI-Driven Misinformation</a>
-        </div>
+        <h2>Tools Used</h2>
+        <ul>
+            <li>Excel</li>
+            <li>SQL</li>
+            <li>Python</li>
+        </ul>
+
+        <h2>Outcome</h2>
+        <p>Recommendations resulted in a 15% improvement in the diversity index of key roles within the company.</p>
     </section>
 
-    <!-- Content Section for the Project -->
-    <section class="container info-box">
-        <h2>Project Overview</h2>
-        <p><strong>Project Duration:</strong> Jan. 2023 – Mar. 2023</p>
-        <p><strong>Tools Used:</strong> SQL, ETL Pipeline, Spotify, Apple Music</p>
-
-        <!-- Google Drive File Button -->
-        <h3>Download SQL Database Project</h3>
-        <p>
-            <a href="https://drive.google.com/file/d/1ZfmTJ9Zi8QbONo_BW3lyo_JHvNsNmbo-/view?usp=sharing" class="btn" style="background-color: #003366; color: white; text-align: center; padding: 10px 20px; display: inline-block; border-radius: 10px; font-weight: bold;" target="_blank">
-                <i class="fas fa-download"></i> Download SQL Database Project
-            </a>
-        </p>
-
-        <!-- SQL Queries Section -->
-        <h3>Complex Queries</h3>
-        <pre>
-            
-1. How many songs are there for the Genre CPop? 
-CREATE VIEW numberOfSongsPerGenre AS (
-    SELECT COUNT(S.SongID) AS numSongs, S.SongName, A.ArtistFirstName, A.ArtistLastName
-    FROM Song S
-    JOIN Genre G ON S.GenreID = G.GenreID
-    JOIN Artist_Song ArtS ON ArtS.SongID = S.SongID
-    JOIN Artist A ON A.ArtistID = ArtS.ArtistID
-    WHERE G.GenreName = 'CPop'
-    GROUP BY S.SongName, A.ArtistFirstName, A.ArtistLastName
-)
-
-2. What/Who are the top 5 most popular songs/artists?
-CREATE VIEW top5SongsAndArtists AS (
-    SELECT DISTINCT TOP 5 S.SongName, A.ArtistFirstName, A.ArtistLastName, S.Streams
-    FROM Song S
-    JOIN Artist_Song ArtS ON S.SongID = ArtS.SongID
-    JOIN Artist A ON ArtS.ArtistID = A.ArtistID
-    ORDER BY S.Streams DESC
-)
-
-1. Which Artist has the most streamed song?
-CREATE VIEW MostStreamedSongArtist AS (
-   SELECT TOP 1 Max(S.Streams) AS Streams, S.SongName, A.ArtistFirstName, 
-   A.ArtistLastName
-   FROM Song S
-   JOIN Artist_Song ArtSong ON ArtSong.SongID = S.SongID
-   JOIN Artist A ON A.ArtistID = ArtSong.ArtistID
-   GROUP BY S.SongName, A.ArtistFirstName, A.ArtistLastName
-)
-
-2. Which artist is most popular in the United States?
-CREATE VIEW MostPopArtistInUS AS (
-   SELECT TOP 1 S.Streams, S.SongName, A.ArtistFirstName, A.ArtistLastName, A.Country
-   FROM Song S
-   JOIN Artist_Song ArtSong ON ArtSong.SongID = S.SongID
-   JOIN Artist A ON A.ArtistID = ArtSong.ArtistID
-   WHERE A.Country = 'U.S.'
-   GROUP BY S.Streams, S.SongName, A.ArtistFirstName, A.ArtistLastName, A.Country
-   ORDER BY S.Streams DESC
-)
-
-1. Which artists have released more than two songs?
-CREATE VIEW ArtistsWith2OrMoreSongs AS (
-    SELECT A.ArtistFirstName, A.ArtistLastName
-    FROM Song S
-    JOIN Artist_Song ASong ON S.SongID = ASong.SongID
-    JOIN Artist A ON A.ArtistID = ASong.ArtistID
-    GROUP BY A.ArtistFirstName, A.ArtistLastName
-    HAVING COUNT(S.SongID) >= 2
-)
-
-2. Return playlists with most variety of songs (has most different genres)
-CREATE VIEW MostVarietyPlaylists AS (
-    SELECT TOP 1 P.PlaylistName, COUNT(S.SongID) AS Songs, COUNT(DISTINCT G.GenreID) AS DiffGenres
-    FROM Song_Playlist SP
-    JOIN Playlist P ON SP.PlaylistID = P.PlaylistID
-    JOIN Song S ON SP.SongID = S.SongID
-    JOIN Genre G ON G.GenreID = S.GenreID
-    GROUP BY P.PlaylistName
-    ORDER BY COUNT(DISTINCT G.GenreID) DESC
-)
-
-1. Average Streams per Genre
-CREATE VIEW View_AverageStreamsPerGenre AS (
-    SELECT g.GenreName, AVG(s.Streams) AS AverageStreams
-    FROM Genre g
-    INNER JOIN Song s ON g.GenreID = s.GenreID
-    GROUP BY g.GenreName
-)
-
-2. Song Count for Genre "HipHop"
-CREATE VIEW View_SongCountHipHop AS (
-    SELECT g.GenreName, COUNT(s.SongName) AS SongCount
-    FROM Genre g
-    INNER JOIN Song s ON g.GenreID = s.GenreID
-    WHERE g.GenreName = 'HipHop'
-    GROUP BY g.GenreName
-)
-        </pre>
-    </section>
-
-    <footer>
+    <footer class="bg-primary text-white text-center py-3">
         <p>Contact me at: jennyevelee@gmail.com</p>
     </footer>
 
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
