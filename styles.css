@@ -1,59 +1,101 @@
-/* Custom styles with Bootstrap integration */
+    /* Body styling */
 body {
-    font-family: 'Lato', sans-serif; /* Matches Bootstrap's default font */
-    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: left; /* Center all content on the page */
 }
 
-/* Header styles */
-header {
+/* Gradient Box Styling - No Rounded Corners */
+.gradient-box {
+    background: linear-gradient(90deg, #003366, #00cfff, #f4f4f4); /* Blue gradient */
+    color: white;
     padding: 20px;
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    max-width: 100%; /* Full width with no rounding */
+    margin: 0;
+    border-radius: 0; /* No rounded corners */
     text-align: center;
-    background-color: var(--bs-primary-bg-subtle);
-    color: var(--bs-body-color);
 }
 
-/* Footer styles */
+/* Centering content */
+.container {
+    width: 100%;  /* Full width */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* Left align the content inside */
+}
+
+/* Navigation buttons centered */
+.project-buttons {
+    text-align: center;  /* Center the buttons */
+    margin: 20px auto;  /* Center with auto margins */
+}
+
+.project-buttons .btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #003366; /* Navy background */
+    color: white; /* White text */
+    border-radius: 10px; /* Rounded square */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-buttons .btn:hover {
+    background-color: #002244; /* Darker navy on hover */
+}
+
+/* Section styling with background color */
+.info-box {
+    padding: 20px;
+    background-color: #e0f7ff; /* Sky blue box */
+    margin: 20px auto;
+    border-radius: 0; /* No rounded corners for full width effect */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ensure the text inside is left-aligned */
+}
+
+/* Header and section text styling */
+h1, h2 {
+    margin-top: 0;
+    color: #003366;
+}
+
+/* List styles for skills and experience */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+}
+
+/* Footer styling */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: var(--bs-primary);
-    color: var(--bs-white);
-}
-
-/* Button styles */
-.btn {
-    font-weight: bold;
-    border-radius: var(--bs-border-radius-lg);
-}
-
-/* Information box styling */
-.info-box {
-    background-color: var(--bs-info-bg-subtle);
     padding: 20px;
-    border-radius: var(--bs-border-radius-lg);
-    margin-bottom: 20px;
+    background-color: #003366;
+    color: white;
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    margin: 0;
 }
 
-/* Container width for large screens */
-.container {
-    max-width: 1140px;
-    margin: auto;
+/* Link styles */
+a {
+    color: white;
+    text-decoration: none;
 }
 
-/* Gradient box styling */
-.gradient-box {
-    background: linear-gradient(90deg, var(--bs-primary), var(--bs-info), var(--bs-light));
-    color: var(--bs-body-color);
-    padding: 20px;
-    border-radius: var(--bs-border-radius-xl);
+a:hover {
+    text-decoration: underline;
 }
-
-/* Additional adjustments */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--bs-heading-color);
-}
-
-p {
-    color: var(--bs-body-color);
-}
-
