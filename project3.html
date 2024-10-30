@@ -5,86 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project 3: Book Checkout Trends</title>
+    <title>Jenny (Jinhee) Lee - Project 3</title>
 
-    <!-- Link to external CSS file for styling -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Optional: Google Font for a more professional look -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
 
 <body>
+    <header class="text-center py-4 bg-primary text-white">
+        <h1>Project 3</h1>
+        <p>Inventory Optimization at Seattle Public Library</p>
+    </header>
 
-    <!-- Gradient Header Box with Navigation Buttons -->
-    <section id="main-info" class="gradient-box">
-        <header>
-            <h1>Jenny (Jinhee) Lee</h1>
-            <p>Seattle, WA | jennyevelee@gmail.com | (954) 278-1368</p>
-            <p>
-                <a href="https://linkedin.com/in/jennyevelee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-                <a href="https://github.com/jennyvlee" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </p>
-        </header>
+    <!-- Content Section -->
+    <section class="container my-5">
+        <h2>Overview</h2>
+        <p>This project analyzed checkout trends at Seattle Public Library to inform inventory management.</p>
 
-        <!-- Navigation buttons placed under the gradient box -->
-        <div class="project-buttons">
-            <a href="index.html" class="btn">Main Page</a>
-            <a href="project1.html" class="btn">Project 1: HRIS Platform</a>
-            <a href="project2.html" class="btn">Project 2: SQL Music Database</a>
-            <a href="project3.html" class="btn">Project 3: Book Checkout Trends</a>
-            <a href="project4.html" class="btn">Project 4: AI-Driven Misinformation</a>
-        </div>
-    </section>
-
-    <!-- Content Section for the Project -->
-    <section class="container info-box">
-        <h2>Project Overview</h2>
-        <p><strong>Project Duration:</strong> Jan. 2023 – Mar. 2023</p>
-        <p><strong>Tools Used:</strong> R, ggplot2, Shiny</p>
-
-        <h3>Key Achievements</h3>
+        <h2>Tools Used</h2>
         <ul>
-            <li>Analyzed Seattle Public Library book checkout trends using R and ggplot2.</li>
-            <li>Performed statistical analysis to identify the most and least popular media types over time.</li>
-            <li>Developed predictive models to forecast monthly checkout trends.</li>
-            <li>Optimized inventory management, reducing unnecessary stock.</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>Excel</li>
         </ul>
+
+        <h2>Outcome</h2>
+        <p>Recommendations from the analysis helped optimize inventory distribution, reducing shortages by 20%.</p>
     </section>
 
-    <!-- Sky Blue Box for Group Project Details -->
-    <section class="container info-box">
-        <h3>nfo201 Final Project</h3>
-        </p>
-        <p>The major questions we are exploring in this project are:</p>
-        </p>
-            <li>What are the most popular types of media being checked out?</li>
-            <li>How have the total checkouts of these media types changed over time?</li>
-            <li>How have the total checkouts of the two usage classes changed over time?</li>
-            <li>Which months have the most and fewest checkouts?</li>
-        <p>
-            This dataset includes a monthly count of Seattle Public Library checkouts by title for physical and electronic items. The dataset begins with checkouts that occurred in April 2005.
-        </p>
-
-        <!-- Shiny App Button -->
-        <h3>Shiny App</h3>
-        <p>
-            <a href="https://rohan1.shinyapps.io/info201b-2023wi-Final-Project-BD5/" class="btn" style="background-color: #003366; color: white; text-align: center; padding: 10px 20px; display: inline-block; border-radius: 10px; font-weight: bold;" target="_blank">
-                <i class="fas fa-chart-line"></i> View Shiny App
-            </a>
-        </p>
-
-        <!-- Shiny App Preview -->
-        <iframe width="768" height="432" src="https://rohan1.shinyapps.io/info201b-2023wi-Final-Project-BD5/" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-    </section>
-
-    <footer>
+    <footer class="bg-primary text-white text-center py-3">
         <p>Contact me at: jennyevelee@gmail.com</p>
     </footer>
 
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
